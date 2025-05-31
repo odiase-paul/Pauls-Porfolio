@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  background: #000;
+}
+@theme {
+  --color-major-yellow: #ffbd39;
+  --color-major-black: #000;
+  --color-white: #ffffff;
+  --color-grey: #999999;
+  --color-innerBg: #ffffff1a;
+}
+
+/* =====> */
+/* @theme {
+  --color-paul: #ff4aff;
+}
+
+@layer components {
+  .button-edit {
+    @apply bg-blue-400 py-5 px-10 text-amber-50 shadow-xl;
+  }
+}
+
+@layer base {
+  h1 {
+    @apply font-[600] text-4xl text-amber-800;
+  }
+  h6 {
+    @apply text-red-800 font-bold bg-amber-300;
+  }
+}
+@utility flex-middle {
+  @apply flex justify-center items-center;
+} */
+
+/* perfect way of responsive text => */
+/* <p className="text-[min(10vw,70px)]">something vry nice and beautiful</p> */

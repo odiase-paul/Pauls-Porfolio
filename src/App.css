@@ -1,0 +1,10 @@
+.dark-shadow-bg {
+  box-shadow: 0px 0px 0px 0px #00000040, inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+}
+.darkest-shadow-bg {
+  box-shadow: 0px 0px 0px 0px #00000040, inset 0 0 0 1000px rgba(0, 0, 0, 0.8);
+  border: 1px solid #ffbd39;
+}
+.darkest-shadow-background {
+  box-shadow: 0px 0px 0px 0px #00000040, inset 0 0 0 1000px rgba(0, 0, 0, 0.8);
+}
