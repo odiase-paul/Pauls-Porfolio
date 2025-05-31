@@ -30,7 +30,11 @@ const Services = ({ ref }) => {
   ];
   const [isHovered, setIsHovered] = useState(null);
   return (
-    <div ref={ref} id="services" className="lg:mb-40 mb-20 max-lg:mx-5">
+    <div
+      ref={ref}
+      id="services"
+      className="lg:mb-40 mb-20 max-lg:mx-5 scroll-mt-20"
+    >
       <div className="items-center flex justify-center">
         <div className="relative">
           <h1 className="relative font-extrabold z-10 mb-5 sm:mb-10 text-[min(9vw,48px)]">

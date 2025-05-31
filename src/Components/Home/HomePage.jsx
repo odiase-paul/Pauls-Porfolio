@@ -17,7 +17,7 @@ const HomePage = ({ ref }) => {
       ref={ref}
       style={{ backgroundImage: `url(${backgroundImage})` }}
       id="homePage"
-      className=" bg-cover  bg-[left_20%]  darkest-shadow-background w-full h-lvh home-page flex items-center max-md:h-screen px-5 lg:px-15 max-md:bg-center mb-20 lg:mb-40"
+      className=" bg-cover  bg-[left_20%]  darkest-shadow-background w-full h-lvh home-page flex items-center max-md:h-screen px-5 lg:px-15 max-md:bg-center mb-20 lg:mb-40 scroll-mt-20"
     >
       <AnimatePresence mode="wait">
         {showFirst ? (

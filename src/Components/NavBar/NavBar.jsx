@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-
-const NavBar = ({ isActive, setIsActive, scrollTo }) => {
+import face from "/src/assets/face.jpg";
+const NavBar = ({ isActive, scrollTo }) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
@@ -61,16 +61,15 @@ const NavBar = ({ isActive, setIsActive, scrollTo }) => {
                 </a>
               </div>
             </div>
-            <div className="hidden  md:ml-6 md:block">
-              <div className="flex space-x-4">
+            <div className="hidden  md:ml-6 md:block ">
+              <div className="flex space-x-4 ">
                 <a
                   onClick={scrollTo.home}
-                  href="#homePage"
-                  className={`${
+                  className={`cursor-pointer ${
                     isActive === "home"
                       ? " border-major-yellow border-b-2 inline-block text-major-yellow"
                       : "text-white"
-                  } "z-10 relative align-center group pb-1 mx-3 my-2 text-sm font-medium   "`}
+                  } z-10 relative align-center group pb-1 mx-3 my-2 text-sm font-medium`}
                   aria-current="page"
                 >
                   Home
@@ -82,12 +81,11 @@ const NavBar = ({ isActive, setIsActive, scrollTo }) => {
                 </a>
                 <a
                   onClick={scrollTo.about}
-                  href="#aboutUs"
-                  className={`${
+                  className={`cursor-pointer ${
                     isActive === "about"
                       ? "border-b-2 border-major-yellow inline-block text-major-yellow"
                       : "text-white"
-                  } "z-10 relative align-center group pb-1 mx-3 my-2 text-sm font-medium  "`}
+                  } z-10 relative align-center group pb-1 mx-3 my-2 text-sm font-medium`}
                   aria-current="page"
                 >
                   About
@@ -99,12 +97,11 @@ const NavBar = ({ isActive, setIsActive, scrollTo }) => {
                 </a>
                 <a
                   onClick={scrollTo.resume}
-                  href="#resume"
-                  className={`${
+                  className={`cursor-pointer ${
                     isActive === "resume"
                       ? "border-b-2 border-major-yellow inline-block text-major-yellow"
                       : "text-white"
-                  } "z-10 relative align-center group pb-1 mx-3 my-2 text-sm font-medium  "`}
+                  } z-10 relative align-center group pb-1 mx-3 my-2 text-sm font-medium`}
                   aria-current="page"
                 >
                   Resume
@@ -116,12 +113,11 @@ const NavBar = ({ isActive, setIsActive, scrollTo }) => {
                 </a>
                 <a
                   onClick={scrollTo.services}
-                  href="#services"
-                  className={`${
+                  className={`cursor-pointer ${
                     isActive === "services"
                       ? "border-b-2 border-major-yellow inline-block text-major-yellow"
                       : "text-white"
-                  } "z-10 relative align-center group pb-1 mx-3 my-2 text-sm font-medium   "`}
+                  } z-10 relative align-center group pb-1 mx-3 my-2 text-sm font-medium`}
                   aria-current="page"
                 >
                   Services
@@ -133,12 +129,11 @@ const NavBar = ({ isActive, setIsActive, scrollTo }) => {
                 </a>
                 <a
                   onClick={scrollTo.skills}
-                  href="#skills"
-                  className={`${
+                  className={`cursor-pointer ${
                     isActive === "skills"
                       ? "border-b-2 border-major-yellow inline-block text-major-yellow"
                       : "text-white"
-                  } "z-10 relative align-center group pb-1 mx-3 my-2 text-sm font-medium  "`}
+                  } z-10 relative align-center group pb-1 mx-3 my-2 text-sm font-medium`}
                   aria-current="page"
                 >
                   Skills
@@ -150,12 +145,11 @@ const NavBar = ({ isActive, setIsActive, scrollTo }) => {
                 </a>
                 <a
                   onClick={scrollTo.projects}
-                  href="#our-projects"
-                  className={`${
+                  className={`cursor-pointer ${
                     isActive === "projects"
                       ? "border-b-2 border-major-yellow inline-block text-major-yellow"
                       : "text-white"
-                  } "z-10 relative align-center group pb-1 mx-3 my-2 text-sm font-medium   "`}
+                  } z-10 relative align-center group pb-1 mx-3 my-2 text-sm font-medium`}
                   aria-current="page"
                 >
                   Projects
@@ -167,12 +161,11 @@ const NavBar = ({ isActive, setIsActive, scrollTo }) => {
                 </a>
                 <a
                   onClick={scrollTo.contacts}
-                  href="#contact"
-                  className={`${
+                  className={`cursor-pointer ${
                     isActive === "contacts"
                       ? "border-b-2 border-major-yellow inline-block text-major-yellow"
                       : "text-white"
-                  } "z-10 relative align-center group pb-1 mx-3 my-2 text-sm font-medium  "`}
+                  } z-10 relative align-center group pb-1 mx-3 my-2 text-sm font-medium`}
                   aria-current="page"
                 >
                   Contacts
@@ -187,11 +180,7 @@ const NavBar = ({ isActive, setIsActive, scrollTo }) => {
             {/* profile image */}
             <div className="absolute inset-y-0 left-1/2 transform -translate-x-1/2 flex items-center pr-2 md:static md:inset-auto md:ml-6 md:pr-0">
               <div className="relative ml-3">
-                {/* <img
-                  className="size-8 rounded-full"
-                  src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                  alt=""
-                /> */}
+                <img className="size-8 rounded-full" src={face} alt="" />
               </div>
             </div>
           </div>
@@ -210,7 +199,6 @@ const NavBar = ({ isActive, setIsActive, scrollTo }) => {
                 <div className="relative">
                   <a
                     onClick={scrollTo.home}
-                    href="#"
                     className={`block rounded-md  px-3 py-2  transition text-base font-medium ${
                       isActive === "home" ? "text-major-yellow" : "text-white"
                     } `}
@@ -235,12 +223,11 @@ const NavBar = ({ isActive, setIsActive, scrollTo }) => {
 
                 <div className="relative">
                   <a
-                    href="#"
+                    onClick={scrollTo.about}
                     className={`block rounded-md  px-3 py-2  transition text-base font-medium ${
                       isActive === "about" ? "text-major-yellow" : "text-white"
                     } `}
                     aria-current="page"
-                    onClick={scrollTo.about}
                   >
                     <span className="relative inline-block">
                       About
@@ -260,12 +247,11 @@ const NavBar = ({ isActive, setIsActive, scrollTo }) => {
                 </div>
                 <div className="relative">
                   <a
-                    href="#"
+                    onClick={scrollTo.resume}
                     className={`block rounded-md  px-3 py-2  transition text-base font-medium ${
                       isActive === "resume" ? "text-major-yellow" : "text-white"
                     } `}
                     aria-current="page"
-                    onClick={scrollTo.resume}
                   >
                     <span className="relative inline-block">
                       Resume
@@ -285,14 +271,13 @@ const NavBar = ({ isActive, setIsActive, scrollTo }) => {
                 </div>
                 <div className="relative">
                   <a
-                    href="#"
+                    onClick={scrollTo.services}
                     className={`block rounded-md  px-3 py-2  transition text-base font-medium ${
                       isActive === "services"
                         ? "text-major-yellow"
                         : "text-white"
                     } `}
                     aria-current="page"
-                    onClick={scrollTo.services}
                   >
                     <span className="relative inline-block">
                       Service
@@ -312,12 +297,11 @@ const NavBar = ({ isActive, setIsActive, scrollTo }) => {
                 </div>
                 <div className="relative">
                   <a
-                    href="#"
+                    onClick={scrollTo.skills}
                     className={`block rounded-md  px-3 py-2  transition text-base font-medium ${
                       isActive === "skills" ? "text-major-yellow" : "text-white"
                     } `}
                     aria-current="page"
-                    onClick={scrollTo.skills}
                   >
                     <span className="relative inline-block">
                       Skills
@@ -337,14 +321,13 @@ const NavBar = ({ isActive, setIsActive, scrollTo }) => {
                 </div>
                 <div className="relative">
                   <a
-                    href="#"
+                    onClick={scrollTo.projects}
                     className={`block rounded-md  px-3 py-2  transition text-base font-medium ${
                       isActive === "projects"
                         ? "text-major-yellow"
                         : "text-white"
                     } `}
                     aria-current="page"
-                    onClick={scrollTo.projects}
                   >
                     <span className="relative inline-block">
                       Projects
@@ -364,14 +347,13 @@ const NavBar = ({ isActive, setIsActive, scrollTo }) => {
                 </div>
                 <div className="relative">
                   <a
-                    href="#"
+                    onClick={scrollTo.contacts}
                     className={`block rounded-md  px-3 py-2  transition text-base font-medium ${
                       isActive === "contacts"
                         ? "text-major-yellow"
                         : "text-white"
                     } `}
                     aria-current="page"
-                    onClick={scrollTo.contacts}
                   >
                     <span className="relative inline-block">
                       Contact

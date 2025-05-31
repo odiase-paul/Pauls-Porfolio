@@ -11,6 +11,9 @@ import Contact from "../Contact/Contact";
 import { useInView } from "framer-motion";
 
 const RootComponent = () => {
+  const [isActive, setIsActive] = useState("home");
+  const [isScrolling, setIsScrolling] = useState(false);
+
   const homeRef = useRef(null);
   const aboutRef = useRef(null);
   const skillRef = useRef(null);
@@ -19,17 +22,16 @@ const RootComponent = () => {
   const servicesRef = useRef(null);
   const contactRef = useRef(null);
 
-  const homeInView = useInView(homeRef, { threshold: 0.5 });
-  const aboutInView = useInView(aboutRef, { threshold: 0.5 });
-  const skillInView = useInView(skillRef, { threshold: 0.5 });
-  const resumeInView = useInView(resumeRef, { threshold: 0.5 });
-  const projectInView = useInView(projectRef, { threshold: 0.5 });
-  const servicesInView = useInView(servicesRef, { threshold: 0.5 });
-  const contactInView = useInView(contactRef, { threshold: 0.5 });
-
-  const [isActive, setIsActive] = useState("home");
+  const homeInView = useInView(homeRef, { threshold: 0.6 });
+  const aboutInView = useInView(aboutRef, { threshold: 0.6 });
+  const skillInView = useInView(skillRef, { threshold: 0.6 });
+  const resumeInView = useInView(resumeRef, { threshold: 0.6 });
+  const projectInView = useInView(projectRef, { threshold: 0.6 });
+  const servicesInView = useInView(servicesRef, { threshold: 0.6 });
+  const contactInView = useInView(contactRef, { threshold: 0.6 });
 
   useEffect(() => {
+    if (isScrolling) return;
     if (homeInView) {
       setIsActive("home");
     } else if (aboutInView) {
@@ -49,14 +51,25 @@ const RootComponent = () => {
     homeInView,
     aboutInView,
     resumeInView,
-    servicesInView,
     skillInView,
+    servicesInView,
     projectInView,
     contactInView,
+    isScrolling,
   ]);
 
-  const scrollTo = (ref) => {
-    ref.current?.scrollIntoView({ behavior: "smooth" });
+  const scrollTo = (ref, sectionName) => {
+    setIsScrolling(true);
+    const offSet = 50;
+    const top = ref.current.offsetTop - offSet;
+    window.scrollTo({
+      top,
+      behavior: "smooth",
+    });
+    setTimeout(() => {
+      setIsActive(sectionName);
+      setIsScrolling(false);
+    }, 600);
   };
 
   return (
@@ -65,13 +78,13 @@ const RootComponent = () => {
         isActive={isActive}
         setIsActive={setIsActive}
         scrollTo={{
-          home: () => scrollTo(homeRef),
-          about: () => scrollTo(aboutRef),
-          resume: () => scrollTo(resumeRef),
-          services: () => scrollTo(servicesRef),
-          skills: () => scrollTo(skillRef),
-          projects: () => scrollTo(projectRef),
-          contacts: () => scrollTo(contactRef),
+          home: () => scrollTo(homeRef, "home"),
+          about: () => scrollTo(aboutRef, "about"),
+          resume: () => scrollTo(resumeRef, "resume"),
+          services: () => scrollTo(servicesRef, "services"),
+          skills: () => scrollTo(skillRef, "skills"),
+          projects: () => scrollTo(projectRef, "projects"),
+          contacts: () => scrollTo(contactRef, "contacts"),
         }}
       />
       <HomePage ref={homeRef} />

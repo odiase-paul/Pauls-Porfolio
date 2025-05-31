@@ -5,7 +5,7 @@ const AboutUs = ({ ref }) => {
     <div
       ref={ref}
       id="aboutUs"
-      className="flex justify-center mx-5 mb-20 lg:mb-40 lg:space-x-30 lg:mx-15 md:flex-row flex-col-reverse gap-10"
+      className="flex justify-center mx-5 mb-20 lg:mb-40 lg:space-x-30 lg:mx-15 md:flex-row flex-col-reverse gap-10 scroll-mt-20"
     >
       <div className="flex items-center w-3/4 md:w-600 max-md:mx-auto">
         <img className="w-full md:w-[100%]" src={aboutUsImage} alt="" />
@@ -13,10 +13,10 @@ const AboutUs = ({ ref }) => {
 
       <div>
         <div className="relative mb-10">
-          <h1 className="relative text-[min(6vw,48px)] font-extrabold z-10 text-center ">
+          <h1 className="relative text-[min(9vw,48px)] font-extrabold z-10 text-center max-md:text-[min(9vw,48px)]">
             About Us
           </h1>
-          <h1 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mt-3.5 sm:mt-5 text-[min(8vw,72px)] font-extrabold text-white/10 z-0 ">
+          <h1 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mt-3.5 sm:mt-5 text-[min(10vw,72px)] max-md:text-[min(10vw,96px)] font-extrabold text-white/10 z-0 ">
             About
           </h1>
         </div>
