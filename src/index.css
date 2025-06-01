@@ -11,6 +11,7 @@ body {
 @theme {
   --color-major-yellow: #ffbd39;
   --color-major-black: #000;
+  --color-major-black-text: #1a1a1a;
   --color-white: #ffffff;
   --color-grey: #999999;
   --color-innerBg: #ffffff1a;

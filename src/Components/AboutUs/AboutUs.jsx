@@ -21,7 +21,7 @@ const AboutUs = ({ ref }) => {
       >
         <div className="relative mb-10">
           <h1 className="relative text-[min(9vw,48px)] font-extrabold z-10 text-center max-md:text-[min(9vw,48px)]">
-            About Us
+            About
           </h1>
           {/* <h1 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mt-3.5 sm:mt-5 text-[min(10vw,72px)] max-md:text-[min(10vw,96px)] font-extrabold text-white/10 z-0 ">
             About
@@ -72,7 +72,7 @@ const AboutUs = ({ ref }) => {
             <a
               href="paul_akhere_odiase.pdf"
               download="paul_akhere_odiase.pdf"
-              className="rounded-4xl px-5 py-4 text-major-black bg-major-yellow text-[12px] font-semibold tracking-widest"
+              className="rounded-4xl px-5 py-4 text-major-black-text bg-major-yellow text-[12px] font-semibold tracking-widest"
             >
               DOWNLOAD CV
             </a>

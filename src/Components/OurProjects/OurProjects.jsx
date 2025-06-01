@@ -298,7 +298,7 @@ const OurProjects = ({ ref, scrollTo }) => {
           </p>
           <a
             onClick={scrollTo.contacts}
-            className=" rounded-4xl px-10 py-4 text-major-black bg-major-yellow text-[min(4vw,12px)] font-semibold tracking-widest cursor-pointer"
+            className=" rounded-4xl px-10 py-4 text-major-black-text bg-major-yellow text-[min(4vw,12px)] font-semibold tracking-widest cursor-pointer"
           >
             HIRE ME
           </a>

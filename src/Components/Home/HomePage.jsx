@@ -43,13 +43,13 @@ const HomePage = ({ ref, scrollTo }) => {
             <div className="flex space-x-4">
               <a
                 onClick={scrollTo.contacts}
-                className="bg-major-yellow text-major-black px-5.5 py-3.5 rounded-4xl  text-[min(5vw,12px)] font-semibold tracking-widest cursor-pointer"
+                className="bg-major-yellow text-major-black-text flex justify-center items-center px-5.5 py-3.5 rounded-4xl  text-[min(5vw,12px)] font-semibold tracking-widest cursor-pointer"
               >
                 HIRE ME
               </a>
               <a
                 onClick={scrollTo.projects}
-                className="bg-major-black text-white px-5.5 py-3.5 rounded-4xl border-1 border-gray-500 text-[min(5vw,12px)] font-semibold tracking-widest cursor-pointer"
+                className="bg-major-black text-white flex justify-center items-center px-5.5 py-3.5 rounded-4xl border-1 border-gray-500 text-[min(5vw,12px)] font-semibold tracking-widest cursor-pointer"
               >
                 MY PROJECTS
               </a>
@@ -75,13 +75,13 @@ const HomePage = ({ ref, scrollTo }) => {
             <div className="flex space-x-4">
               <a
                 onClick={scrollTo.contacts}
-                className="bg-major-yellow text-major-black px-5.5 py-3.5 rounded-4xl text-[min(5vw,12px)] font-semibold tracking-widest cursor-pointer"
+                className="bg-major-yellow text-major-black-text flex justify-center items-center px-5.5 py-3.5 rounded-4xl text-[min(5vw,12px)] font-semibold tracking-widest cursor-pointer"
               >
                 HIRE ME
               </a>
               <a
                 onClick={scrollTo.projects}
-                className="bg-major-black text-white px-5.5 py-3.5 rounded-4xl border-1 border-gray-500 text-[min(5vw,12px)] font-semibold tracking-widest cursor-pointer"
+                className="bg-major-black text-white flex justify-center items-center px-5.5 py-3.5 rounded-4xl border-1 border-gray-500 text-[min(5vw,12px)] font-semibold tracking-widest cursor-pointer"
               >
                 MY PROJECTS
               </a>
