@@ -94,7 +94,17 @@ const RootComponent = () => {
       <MySkill ref={skillRef} />
       <OurProjects ref={projectRef} />
       <Contact ref={contactRef} />
-      <Footer />
+      <Footer
+        scrollTo={{
+          home: () => scrollTo(homeRef, "home"),
+          about: () => scrollTo(aboutRef, "about"),
+          resume: () => scrollTo(resumeRef, "resume"),
+          services: () => scrollTo(servicesRef, "services"),
+          skills: () => scrollTo(skillRef, "skills"),
+          projects: () => scrollTo(projectRef, "projects"),
+          contacts: () => scrollTo(contactRef, "contacts"),
+        }}
+      />
     </div>
   );
 };

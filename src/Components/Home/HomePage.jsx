@@ -22,12 +22,14 @@ const HomePage = ({ ref }) => {
       <AnimatePresence mode="wait">
         {showFirst ? (
           <motion.div
-            className="w-140  flex flex-col space-y-5 max-sm:w-full max-sm:items-center "
-            key="box1"
-            initial={{ opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            initial={{ y: 100, opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 1 }}
+            transition={{ duration: 0.6 }}
+            className="w-140  flex flex-col space-y-5 max-sm:w-full max-sm:items-center "
+            key="box1"
           >
             <p className="text-major-yellow text-[min(4vw,14px)] font-medium tracking-widest">
               HELLO!

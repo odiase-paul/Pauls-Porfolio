@@ -7,8 +7,9 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import EmailIcon from "@mui/icons-material/Email";
 import InstagramIcon from "@mui/icons-material/Instagram";
+import { motion } from "framer-motion";
 
-const Footer = () => {
+const Footer = ({ scrollTo }) => {
   const year = new Date().getFullYear();
   return (
     <div className="mt-7 font-medium text-grey mb-20 lg:mx-20 mx-5">
@@ -21,7 +22,13 @@ const Footer = () => {
             The future belongs to those who believe in the beauty of their
             dreams
           </p>
-          <div className="flex gap-5 mt-10">
+          <motion.div
+            initial={{ y: 100, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="flex gap-5 mt-10"
+          >
             <Link
               to="https://x.com/OdiaseAkhere?t=Ym1s4PbNYBdcRNdLhb39Yw&s=08"
               className="p-3 rounded-full bg-innerBg"
@@ -43,25 +50,40 @@ const Footer = () => {
               {" "}
               <GitHubIcon sx={{ fontSize: 25 }} />
             </Link>
-          </div>
+          </motion.div>
         </div>
         <div className="flex flex-col gap-y-5 sm:w-50">
           <header className="text-white font-semibold mb-3 text-[min(6vw,22px)]">
             Links
           </header>
-          <a className="text-[min(4vw,16px)]" href="#homePage">
+          <a
+            className="text-[min(4vw,16px)] cursor-pointer"
+            onClick={scrollTo.home}
+          >
             &#8594; Home
           </a>
-          <a className="text-[min(4vw,16px)]" href="#aboutUs">
+          <a
+            className="text-[min(4vw,16px)] cursor-pointer"
+            onClick={scrollTo.about}
+          >
             &#8594; About
           </a>
-          <a className="text-[min(4vw,16px)]" href="#services">
+          <a
+            className="text-[min(4vw,16px)] cursor-pointer"
+            onClick={scrollTo.services}
+          >
             &#8594; Service
           </a>
-          <a className="text-[min(4vw,16px)]" href="#our-projects">
+          <a
+            className="text-[min(4vw,16px)] cursor-pointer"
+            onClick={scrollTo.projects}
+          >
             &#8594; Projects
           </a>
-          <a className="text-[min(4vw,16px)]" href="#contact">
+          <a
+            className="text-[min(4vw,16px)] cursor-pointer"
+            onClick={scrollTo.contacts}
+          >
             &#8594; Contact
           </a>
         </div>
@@ -69,13 +91,22 @@ const Footer = () => {
           <header className="text-white font-semibold mb-3 text-[min(6vw,22px)]">
             Services
           </header>
-          <a className="text-[min(4vw,16px)]" href="#services">
+          <a
+            className="text-[min(4vw,16px)] cursor-pointer"
+            onClick={scrollTo.services}
+          >
             &#8594; Web Development
           </a>
-          <a className="text-[min(4vw,16px)]" href="#services">
+          <a
+            className="text-[min(4vw,16px)] cursor-pointer"
+            onClick={scrollTo.services}
+          >
             &#8594; Mobile App Development
           </a>
-          <a className="text-[min(4vw,16px)]" href="#services">
+          <a
+            className="text-[min(4vw,16px)] cursor-pointer"
+            onClick={scrollTo.services}
+          >
             &#8594; Graphics Design
           </a>
         </div>

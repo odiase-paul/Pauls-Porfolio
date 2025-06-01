@@ -30,7 +30,11 @@ const Services = ({ ref }) => {
   ];
   const [isHovered, setIsHovered] = useState(null);
   return (
-    <div
+    <motion.div
+      initial={{ y: 100, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
       ref={ref}
       id="services"
       className="lg:mb-40 mb-20 max-lg:mx-5 scroll-mt-20"
@@ -55,7 +59,11 @@ const Services = ({ ref }) => {
       <div className="grid grid-rows md:grid-cols-3 gap-8 lg:mx-20">
         {serviceDetails.map((items, i) => {
           return (
-            <div
+            <motion.div
+              initial={{ y: 100, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
               id={items.id}
               onMouseEnter={() => setIsHovered(items.id)}
               onMouseLeave={() => setIsHovered(null)}
@@ -86,11 +94,11 @@ const Services = ({ ref }) => {
               ) : (
                 ""
               )}
-            </div>
+            </motion.div>
           );
         })}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

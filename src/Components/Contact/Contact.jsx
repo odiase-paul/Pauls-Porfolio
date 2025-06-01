@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import SignpostIcon from "@mui/icons-material/Signpost";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import EmailIcon from "@mui/icons-material/Email";
@@ -6,6 +6,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import { Link } from "react-router-dom";
 import picture from "/src/assets/my_photo.jpg";
 import emailjs from "@emailjs/browser";
+import { motion } from "framer-motion";
 
 const defaultFields = {
   name: "",
@@ -86,7 +87,11 @@ const Contact = ({ ref }) => {
   ];
 
   return (
-    <div
+    <motion.div
+      initial={{ y: 100, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
       ref={ref}
       id="contact"
       className="lg:mb-40 mb-20 max-lg:mx-5 scroll-mt-20"
@@ -109,7 +114,14 @@ const Contact = ({ ref }) => {
       <div className="flex flex-col items-center gap-y-10 max-md:items-center max-lg:items-start md:flex-row md:justify-between max-lg:gap-x-2 lg:mx-25 md:mb-25 mb-15">
         {contacts.map((items, index) => {
           return (
-            <div key={index} className="flex flex-col items-center gap-5 w-60">
+            <motion.div
+              initial={{ y: 100, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              key={index}
+              className="flex flex-col items-center gap-5 w-60"
+            >
               <span className="p-7 bg-innerBg rounded-full">{items.icon}</span>
               <p className="font-medium text-center text-[min(4vw,18px)]">
                 {items.title}
@@ -117,11 +129,17 @@ const Contact = ({ ref }) => {
               <p className="text-[min(4vw,16px)] text-center text-grey font-normal">
                 {items.paragraph}
               </p>
-            </div>
+            </motion.div>
           );
         })}
       </div>
-      <div className="lg:mx-25">
+      <motion.div
+        initial={{ y: 100, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="lg:mx-25"
+      >
         <div className="flex gap-10 flex-col max-md:flex-col-reverse md:flex-row ">
           <div className="w-3/6 flex items-center max-md:hidden">
             <img className="w-96" src={picture} alt="" />
@@ -188,8 +206,8 @@ const Contact = ({ ref }) => {
             </form>
           </div>
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 

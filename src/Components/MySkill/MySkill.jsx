@@ -1,5 +1,5 @@
 import React from "react";
-
+import { motion } from "framer-motion";
 const MySkill = ({ ref }) => {
   const skillBars = [
     { id: 1, heading: "HTML", barValue: 95 },
@@ -10,7 +10,11 @@ const MySkill = ({ ref }) => {
     { id: 6, heading: "GitHub", barValue: 90 },
   ];
   return (
-    <div
+    <motion.div
+      initial={{ y: 100, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
       ref={ref}
       id="skills"
       className="lg:mb-40 mb-20 max-lg:mx-5 scroll-mt-20 "
@@ -35,7 +39,13 @@ const MySkill = ({ ref }) => {
       <div className="grid grid-rows md:grid-cols-2 gap-8 lg:mx-20">
         {skillBars.map((items, i) => {
           return (
-            <div key={i}>
+            <motion.div
+              initial={{ y: 100, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              key={i}
+            >
               <div>
                 <p className="text-lg font-semibold mb-2">{items.heading}</p>
                 <div className="relative w-full bg-innerBg rounded-full h-3">
@@ -52,11 +62,11 @@ const MySkill = ({ ref }) => {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           );
         })}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

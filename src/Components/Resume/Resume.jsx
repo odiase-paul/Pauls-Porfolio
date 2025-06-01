@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const Resume = ({ ref }) => {
   const resumeDetails = [
@@ -44,7 +45,11 @@ const Resume = ({ ref }) => {
     },
   ];
   return (
-    <div
+    <motion.div
+      initial={{ y: 100, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
       ref={ref}
       id="resume"
       className="lg:mb-40 mb-20 max-lg:mx-5 scroll-mt-20"
@@ -71,7 +76,14 @@ const Resume = ({ ref }) => {
       <div className="grid grid-rows md:grid-cols-2 gap-8 lg:mx-20">
         {resumeDetails.map((items, i) => {
           return (
-            <div key={i} className="bg-innerBg rounded-sm p-10">
+            <motion.div
+              initial={{ y: 100, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              key={i}
+              className="bg-innerBg rounded-sm p-10"
+            >
               <div className="flex flex-col gap-y-4">
                 <h1 className="text-major-yellow font-extrabold text-[min(6vw,24px)]">
                   {items.year}
@@ -86,11 +98,11 @@ const Resume = ({ ref }) => {
                   {items.paragragh}
                 </p>
               </div>
-            </div>
+            </motion.div>
           );
         })}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

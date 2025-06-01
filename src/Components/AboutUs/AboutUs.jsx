@@ -1,5 +1,7 @@
 import React from "react";
 import aboutUsImage from "/src/assets/my_photo.jpg";
+import { motion } from "framer-motion";
+
 const AboutUs = ({ ref }) => {
   return (
     <div
@@ -11,7 +13,12 @@ const AboutUs = ({ ref }) => {
         <img className="w-full md:w-[100%]" src={aboutUsImage} alt="" />
       </div>
 
-      <div>
+      <motion.div
+        initial={{ y: 100, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
         <div className="relative mb-10">
           <h1 className="relative text-[min(9vw,48px)] font-extrabold z-10 text-center max-md:text-[min(9vw,48px)]">
             About Us
@@ -71,7 +78,7 @@ const AboutUs = ({ ref }) => {
             </a>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
