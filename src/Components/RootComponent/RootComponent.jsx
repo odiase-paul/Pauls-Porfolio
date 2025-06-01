@@ -87,12 +87,23 @@ const RootComponent = () => {
           contacts: () => scrollTo(contactRef, "contacts"),
         }}
       />
-      <HomePage ref={homeRef} />
+      <HomePage
+        ref={homeRef}
+        scrollTo={{
+          projects: () => scrollTo(projectRef, "projects"),
+          contacts: () => scrollTo(contactRef, "contacts"),
+        }}
+      />
       <AboutUs ref={aboutRef} />
       <Resume ref={resumeRef} />
       <Services ref={servicesRef} />
       <MySkill ref={skillRef} />
-      <OurProjects ref={projectRef} />
+      <OurProjects
+        ref={projectRef}
+        scrollTo={{
+          contacts: () => scrollTo(contactRef, "contacts"),
+        }}
+      />
       <Contact ref={contactRef} />
       <Footer
         scrollTo={{

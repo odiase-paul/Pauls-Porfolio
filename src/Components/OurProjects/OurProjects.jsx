@@ -14,7 +14,7 @@ import { useSwipeable } from "react-swipeable";
 import TravelExploreIcon from "@mui/icons-material/TravelExplore";
 import backGroundImageTwo from "/src/assets/backgroundImgTop.jpg";
 
-const OurProjects = ({ ref }) => {
+const OurProjects = ({ ref, scrollTo }) => {
   const [isHovered, setIsHovered] = useState(null);
   const projects = [
     {
@@ -175,9 +175,6 @@ const OurProjects = ({ ref }) => {
           <h1 className="relative text-5xl font-extrabold z-10 mb-5 sm:mb-10 text-[min(9vw,48px)]">
             Our Projects
           </h1>
-          <h1 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mt-2 text-[min(10vw,96px)] font-extrabold text-white/10 z-0">
-            Projects
-          </h1>
         </div>
       </div>
       <div className="mx-0 md:mx-20 mb-20">
@@ -300,8 +297,8 @@ const OurProjects = ({ ref }) => {
             Hire the best to get the best project
           </p>
           <a
-            href="#contact"
-            className=" rounded-4xl px-10 py-4 text-major-black bg-major-yellow text-[min(4vw,12px)] font-semibold tracking-widest"
+            onClick={scrollTo.contacts}
+            className=" rounded-4xl px-10 py-4 text-major-black bg-major-yellow text-[min(4vw,12px)] font-semibold tracking-widest cursor-pointer"
           >
             HIRE ME
           </a>

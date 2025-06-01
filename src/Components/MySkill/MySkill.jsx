@@ -24,9 +24,6 @@ const MySkill = ({ ref }) => {
           <h1 className="relative text-5xl font-extrabold z-10 mb-5 sm:mb-10 text-[min(9vw,48px)]">
             My Skills
           </h1>
-          <h1 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mt-2 text-[min(10vw,96px)] font-extrabold text-white/10 z-0">
-            Skills
-          </h1>
         </div>
       </div>
       <div className="mx-0 md:mx-20 mb-20">
