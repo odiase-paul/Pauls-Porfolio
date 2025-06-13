@@ -7,7 +7,6 @@ import heroShop from "/src/assets/hero-shop_ss.png";
 import fakeApi from "/src/assets/fake-api_shop.png";
 import quizPage from "/src/assets/quiz-page_ss.png";
 import ourMenu from "/src/assets/our_menu_ss.png";
-import startLink from "/src/assets/startlink_ss.png";
 import tinDog from "/src/assets/tindog_ss.png";
 import revent from "/src/assets/rectangle.png";
 import { useSwipeable } from "react-swipeable";
@@ -87,20 +86,7 @@ const OurProjects = ({ ref, scrollTo }) => {
       title: "Our Menu",
       link: "https://menu-list-sooty.vercel.app/",
     },
-    {
-      id: 6,
-      image: startLink,
-      icon: (
-        <TravelExploreIcon
-          sx={{
-            fontSize: 45,
-            color: "#ffbd39",
-          }}
-        />
-      ),
-      title: "StarLink",
-      link: "https://starlink-iota.vercel.app/",
-    },
+
     {
       id: 7,
       image: tinDog,

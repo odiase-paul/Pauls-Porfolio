@@ -70,8 +70,8 @@ const AboutUs = ({ ref }) => {
           </div>
           <div>
             <a
-              href="paul_akhere_odiase.pdf"
-              download="paul_akhere_odiase.pdf"
+              href="Paul_Akhere_Portfolio.pdf"
+              download="Paul_Akhere_Portfolio.pdf"
               className="rounded-4xl px-5 py-4 text-major-black-text bg-major-yellow text-[12px] font-semibold tracking-widest"
             >
               DOWNLOAD CV
